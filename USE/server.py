@@ -41,4 +41,8 @@ def scoring():
         "score": res
     }
 
-app.run(port=8080)
+try:
+    app.run(port=8080)
+except:
+    print("running error")
+    
