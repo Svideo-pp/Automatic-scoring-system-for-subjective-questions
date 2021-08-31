@@ -4,16 +4,21 @@ import tensorflow.keras as keras
 import tensorflow_hub as hub
 from flask import Flask, request
 
-module_url = "C:\\Users\\svideo\\AppData\\Local\\Temp\\tfhub_modules\\063d866c06683311b44b4992fd46003be952409c"
+module_url = "The path where you store the USE model in local."
+
+# Load USE model from local
 model = hub.load(module_url)
 print ("module %s loaded" % module_url)
+
+# Define a function that is easy to use the model
 def embed(input):
   return model(input)
 
+
+# deploy flask
 app = Flask(__name__)
 # app.config['ENV'] = 'development'
 # app.config['DEBUG'] = True
-
 
 @app.route('/auto_scoring', methods=['GET', 'POST'])
 def scoring():
@@ -36,19 +41,4 @@ def scoring():
         "score": res
     }
 
-
-app.run(port=80)
-# # What functions do operators perform in programming?
-# student_answer1 = 'Operator is a special symbol used to operate a data value.'
-# student_answer2 = 'Function to operate a data.'
-# student_answer3 = 'Operators are used to manipulating or performing calculations on a variable value.'
-# student_answer4 = 'operator function = manage all forms of programming.'
-# reference_answer = 'Operators function to manipulate the value of a variable.'
-#
-# print(scoring(student_answer1, reference_answer))
-# print(scoring(student_answer2, reference_answer))
-# print(scoring(student_answer3, reference_answer))
-# print(scoring(student_answer4, reference_answer))
-
-# 127.0.0.1:8080/auto_scoring?sa=Operator is a special symbol used to operate a data value.&ra=Operators function to manipulate the value of a variable.
-# gunicorn start:app -c gunicorn.conf.py
+app.run(port=8080)
