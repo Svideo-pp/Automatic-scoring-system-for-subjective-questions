@@ -3,6 +3,7 @@ This is a system that scores student answers based on text similarity due to the
 
 ## Usage 🚀
 Download the model in the corresponding folder as needed.
+You can find more detailed instructions in each model file.
 
 ## Updates
 August 31, 2021: Upload USE model based scoring system
