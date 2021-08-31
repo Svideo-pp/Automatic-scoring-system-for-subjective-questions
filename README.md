@@ -4,6 +4,9 @@ This is a system that scores student answers based on text similarity due to the
 ## Usage 🚀
 Download the model in the corresponding folder as needed.
 
+## Updates
+August 31, 2021: Upload USE model based scoring system
+
 ## Todo ⏰
 - [x] Build a scoring system based on the USE model
 - [ ] Build a scoring system based on the Roberta model
