@@ -10,6 +10,24 @@ The model is trained and optimized for greater-than-word length text, such as se
 
 see more about GLUE task and STS-B: https://openreview.net/pdf?id=rJ4km2R5t7
 
+## Usage
+First download all files in the folder. It is important to note that because the USE model is too large to upload to github, you need to download it from the tensorflow-hub link mentioned above. You can also download it from the google drive below：
+
+
+Then you need to change the `model_url` variable in the 7th line of the `server.py` file to the path where you store the downloaded model in your local computer.
+A sample is like:
+```python
+module_url = "C:\\Users\\svideo\\AppData\\Local\\Temp\\tfhub_modules\\063d866c06683311b44b4992fd46003be952409c"
+```
+
+After that, you need finish the parameter `WORKDIR` of Dockerfile, it is the path that the model to be deployed on the server.
+One instance is like:
+```
+WORKDIR /Project/demo
+```
+
+Congratulations, all the preparations before building the docker image are completed. 🤗
+
 ## Examples
 ```python
 # Question: What functions do operators perform in programming?
