@@ -6,7 +6,8 @@ Download the model in the corresponding folder as needed.
 You can find more detailed instructions in each model file.
 
 ## Updates
-August 31, 2021: Upload USE model based scoring system
+Aug. 31, 2021: Upload USE model based scoring system
+Sep. 14, 2021: Upload Roberta model based scoring system
 
 ## Todo ⏰
 - [x] Build a scoring system based on the USE model
