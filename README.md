@@ -10,6 +10,6 @@ August 31, 2021: Upload USE model based scoring system
 
 ## Todo ⏰
 - [x] Build a scoring system based on the USE model
-- [ ] Build a scoring system based on the Roberta model
-- [ ] Provide some solutions using sentence-transformers library
+- [x] Build a scoring system based on the Roberta model
 - [ ] Find a more reasonable mapping from cosine similarity to the final score
+- [ ] Handle the probs in issues
