@@ -1,0 +1,4 @@
+gunicorn
+gevent
+flask
+sentence_transformers
