@@ -11,8 +11,7 @@ The model is trained and optimized for greater-than-word length text, such as se
 see more about GLUE task and STS-B: https://openreview.net/pdf?id=rJ4km2R5t7
 
 ## Usage
-First download all files in the folder. It is important to note that because the USE model is too large to upload to github, you need to download it from the tensorflow-hub link mentioned above. You can also download it from the google drive below：
-https://drive.google.com/drive/folders/1_b_YAIjTGaO4XDGAYJRCV8NChypThLPz?usp=sharing
+First download all files in the folder. It is important to note that because the USE model is too large to upload to github, you need to download it from the tensorflow-hub link mentioned above.
 
 Then you need to change the `model_url` variable in the 7th line of the `server.py` file to the path where you store the downloaded model in your local computer.
 A sample is like:
