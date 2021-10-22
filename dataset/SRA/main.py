@@ -47,7 +47,7 @@ def Label_analysis(input_labels):
 
 
 # hyperparameters
-model_name = 'C:/Users/svideo/Desktop/HuggingFace Model/roberta-base'
+model_name = 'roberta-base'
 sequence_length = 64
 batchsz = 32
 ROBERTA_DROPOUT = 0.2
