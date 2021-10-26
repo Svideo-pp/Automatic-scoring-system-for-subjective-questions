@@ -51,7 +51,20 @@ sudo docker run -it --rm -p 5000:5000 auto-grading-system
 
 Congratulations, now you have finished all steps, and the auto-grading-system should run on the specificed address and port 🤗  
 ### Method 2 - Pull docker image from docker hub
-# ------------------------ Not finished ------------------------ #
+Just run
+```
+sudo docker pull svideoier/auto-grading-system
+```
+This process will take for minutes if you run it first time since the whole image size is 5.69GB.  
+After finished, use this line to check your image
+```
+sudo docker image ls
+```
+To run it as a container, use
+```
+sudo docker run -it --rm -p 5000:5000 auto-grading-system
+```
+Congratulations, now you have finished all steps, and the auto-grading-system should run on the specificed address and port 🤗  
 
 ## Examples
 ```python
