@@ -1,4 +1,4 @@
-# USE model
+# USE model (DEPRECATED)
 USE is the abbreviation of Universal Sentence Encoder. 
 
 View on the github: https://github.com/tensorflow/hub/blob/master/examples/colab/semantic_similarity_with_tf_hub_universal_encoder.ipynb
