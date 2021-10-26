@@ -6,9 +6,11 @@ Download the model in the corresponding folder as needed.
 You can find more detailed instructions in each model file.
 
 ## Updates
-Aug. 31, 2021: Upload USE model based scoring system
+Aug. 31, 2021: Upload USE model based scoring system (DEPRECATED)
 
 Sep. 14, 2021: Upload Roberta model based scoring system
+
+Oct. 26, 2021: Finish the test of roberta model on linux vm, upload docker image for pulling
 
 ## Todo ⏰
 - [x] Build a scoring system based on the USE model
