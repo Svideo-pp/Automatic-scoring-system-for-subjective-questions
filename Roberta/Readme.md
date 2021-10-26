@@ -17,24 +17,41 @@ Due to the modifications mentioned above. The Roberta model achieves state-of-th
 see more about GLUE task and STS-B: https://openreview.net/pdf?id=rJ4km2R5t7
 
 ## Usage
-Download from huggingface: https://huggingface.co/sentence-transformers/all-roberta-large-v1
-
-You can also download it from the google drive below：
-https://drive.google.com/drive/folders/1JkoWtp5gJgoLLjlwh4ioLBdzla9SeAx8?usp=sharing
-
-Then you need to change the `model_url` variable in the 8th line of the `server.py` file to the path where you store the downloaded model in your local computer.
-A sample is like:
-```python
-module_url = "C:\\Users\\svideo\\Desktop\\HuggingFace Model\\all-roberta-large-v1"
+### Method 1 - Download all codes and dependencies, then build docker image on your own host machine
+#### Step 1 - Download all files in this directory.
+#### Step 2 - Download Huggingface pre-trained model from this link : https://huggingface.co/sentence-transformers/all-roberta-large-v1/tree/main .
+You should archive all files from the link above into a signle dir and name it for example `all-roberta-large-v1` .
+#### Step 3 - Move all files or dirs you downloaded into a url where you want to build your docker image. For instance `/path/to/auto-grading` .
+#### Step 4 - To recap, by now you should have those files and dir structures as below:
+auto-grading  
+|_ _ _ _ all-roberta-large-v1  
+|_ _ _ _ Dockerfile  
+|_ _ _ _ Readme.md  
+|_ _ _ _ gunicorn.conf.py  
+|_ _ _ _ requirements.txt  
+|_ _ _ _ server.py  
+#### Step 5 - Open terminal and run the following codes
+Change the path to where you want build your docker image, for example:
+```
+cd /path/to/auto-grading
+```
+Build the docker file, 'auto-grading-system' is the name of your image
+```
+sudo docker build -t 'auto-grading-system' .
+```
+This process will take for minutes if you run it first time.  
+After finished, use this line to check your image
+```
+sudo docker image ls
+```
+To run it as a container, use
+```
+sudo docker run -it --rm -p 5000:5000 auto-grading-system
 ```
 
-After that, you need finish the parameter `WORKDIR` of Dockerfile, it is the path that the model to be deployed on the server.
-One instance is like:
-```
-WORKDIR /Project/demo
-```
-
-Congratulations, all the preparations before building the docker image are completed. 🤗
+Congratulations, now you have finished all steps, and the auto-grading-system should run on the specificed address and port 🤗  
+### Method 2 - Pull docker image from docker hub
+# ------------------------ Not finished ------------------------ #
 
 ## Examples
 ```python
