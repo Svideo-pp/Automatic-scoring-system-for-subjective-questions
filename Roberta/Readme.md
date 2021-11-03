@@ -17,7 +17,7 @@ Due to the modifications mentioned above. The Roberta model achieves state-of-th
 see more about GLUE task and STS-B: https://openreview.net/pdf?id=rJ4km2R5t7
 
 ## Usage
-### Method 1 - Download all codes and dependencies, then build docker image on your own host machine
+### Method 1 - Download all codes except `client.py` and dependencies, then build docker image on your own host machine
 #### Step 1 - Download all files from this directory.
 #### Step 2 - Download Huggingface pre-trained model from this link : https://huggingface.co/sentence-transformers/all-roberta-large-v1/tree/main .
 You should archive all files from the link above into a signle dir and name it for example `all-roberta-large-v1` .
